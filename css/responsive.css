@@ -1,0 +1,207 @@
+/* Responsive breakpoints (mobile/tablet overrides + reduced-motion) */
+@media (max-width: 800px) {
+    .container {
+        width: min(100% - 36px, 600px);
+    }
+    .site-header {
+        position: fixed;
+        background: #151111;
+        border: 0;
+    }
+    .navbar {
+        min-height: 70px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 18px;
+        right: 18px;
+        padding: 16px;
+        background: var(--espresso);
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+    .nav-menu.is-open {
+        display: flex;
+    }
+    .nav-menu a {
+        padding: 10px 8px;
+    }
+    .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+    }
+    .hero {
+        height: 650px;
+    }
+    .hero-content {
+        padding-top: 20px;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .info-grid > div {
+        padding-left: 15px;
+    }
+    .section {
+        padding: 75px 0;
+    }
+    .story,
+    .menu-layout,
+    .booking-inner {
+        grid-template-columns: 1fr;
+    }
+    .story-image {
+        min-height: 360px;
+    }
+    .story-copy {
+        margin-left: 0;
+        padding: 60px 28px;
+    }
+    .menu-layout {
+        gap: 45px;
+    }
+    .menu-intro {
+        padding: 0;
+    }
+    .service-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-grid {
+        gap: 35px;
+    }
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 25px;
+    }
+    .gallery-item {
+        width: 220px;
+    }
+    .testimonial-item {
+        width: 280px;
+    }
+    .booking-form {
+        grid-template-columns: 1fr 1fr;
+    }
+    .booking-form button {
+        grid-column: span 2;
+    }
+    .form-message {
+        grid-column: 1/-1;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .footer-grid > div:first-child {
+        grid-column: span 2;
+    }
+    .footer-bottom {
+        margin-top: 40px;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .section-heading .eyebrow,
+    .story-copy .eyebrow,
+    .booking .eyebrow,
+    .menu-note .eyebrow,
+    .service-image-band .eyebrow,
+    .contact-details .eyebrow,
+    .map-placeholder .eyebrow {
+        font-size: 38px;
+    }
+    .scroll-hint {
+        bottom: 20px;
+    }
+    .catalog-grid,
+    .value-grid,
+    .service-card-grid,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+    .menu-tabs {
+        margin-top: 35px;
+        flex-wrap: wrap;
+    }
+    .contact-layout {
+        gap: 45px;
+    }
+    .detail-item {
+        display: block;
+    }
+    .detail-item span,
+    .detail-item a {
+        display: block;
+        text-align: left;
+        margin-top: 4px;
+    }
+    .service-card-grid article {
+        min-height: 0;
+    }
+    .page-hero {
+        height: 650px;
+        min-height: 650px;
+    }
+}
+@media (max-width: 767px) {
+    .section-heading h2,
+    .story-copy h2,
+    .booking h2,
+    .menu-note h2,
+    .service-image-band h2,
+    .contact-details h2,
+    .map-placeholder h2 {
+        font-size: 28px;
+    }
+}
+@media (max-width: 460px) {
+    .hero-content h1 {
+        font-size: 46px;
+    }
+    .hero-content > p:not(.eyebrow) {
+        font-size: 14px;
+    }
+    .menu-images {
+        gap: 10px;
+    }
+    .menu-images a.offset {
+        margin-top: 20px;
+    }
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+    .booking-form button,
+    .form-message {
+        grid-column: auto;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid > div:first-child {
+        grid-column: auto;
+    }
+    .testimonial blockquote {
+        font-size: 23px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

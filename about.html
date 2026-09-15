@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="CoffeeBlendの物語をご紹介します。" />
+        <title>私たちについて | CoffeeBlend</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/section-heading.css" />
+        <link rel="stylesheet" href="css/home-content.css" />
+        <link rel="stylesheet" href="css/inner-pages.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/animations.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+    </head>
+    <body data-page="about">
+        <!-- ===== Header / Navigation (injected by js/include.js from partials/header.html) ===== -->
+        <div data-include="header"></div>
+        <main>
+            <!-- ===== Page hero (breadcrumb banner) ===== -->
+            <section
+                class="page-hero"
+                style="background-image: url(&quot;images/bg_3.jpg&quot;)"
+            >
+                <div class="hero-overlay"></div>
+                <div class="container page-hero-content">
+                    <p class="eyebrow">CoffeeBlendについて</p>
+                    <h1>私たちについて</h1>
+                    <p>
+                        <a href="index.html">ホーム</a
+                        ><span>/</span> 私たちについて
+                    </p>
+                </div>
+                <div class="scroll-hint" aria-hidden="true">
+                    <span>スクロールダウン</span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M12 4v15M6 13l6 6 6-6" />
+                    </svg>
+                </div>
+            </section>
+            <!-- ===== Our story ===== -->
+            <section class="story section about-story">
+                <div
+                    class="story-image"
+                    style="background-image: url(&quot;images/about.jpg&quot;)"
+                ></div>
+                <div class="story-copy">
+                    <p class="eyebrow eyebrow-dark">私たちの物語</p>
+                    <h2>小さな場所から、大きな心を。</h2>
+                    <p>
+                        CoffeeBlendは、良いコーヒーが何気ない時間を特別にするという思いから始まりました。個性豊かな豆を選び、一皿一皿に心を込めています。
+                    </p>
+                    <p>
+                        自然体で過ごせるおもてなしを大切にしています。気取らず、急がず、美味しい料理とコーヒーを楽しめる温かな場所です。
+                    </p>
+                </div>
+            </section>
+            <!-- ===== Values (3-column value props) ===== -->
+            <section class="section values">
+                <div class="container">
+                    <div class="section-heading centered">
+                        <p class="eyebrow eyebrow-dark">
+                            私たちが大切にすること
+                        </p>
+                        <h2>毎日の習慣のために</h2>
+                    </div>
+                    <div class="value-grid">
+                        <article>
+                            <span>01</span>
+                            <h3>誠実な素材</h3>
+                            <p>
+                                自信を持って届けられる食材とコーヒーを選び、素材本来の味を引き出します。
+                            </p>
+                        </article>
+                        <article>
+                            <span>02</span>
+                            <h3>温かなおもてなし</h3>
+                            <p>
+                                初めての方にも、いつもの方にも。家に帰ったような心地よさを感じていただけるように。
+                            </p>
+                        </article>
+                        <article>
+                            <span>03</span>
+                            <h3>深呼吸できる空間</h3>
+                            <p>
+                                静かなテーブルと美味しい一杯、それを楽しむ時間。これがCoffeeBlendのスタイルです。
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== Quote band ===== -->
+            <section class="quote-band">
+                <div class="container">
+                    <p class="quote-mark">“</p>
+                    <blockquote>
+                        朝のエスプレッソを楽しみ、会話の続きをどうぞ。
+                    </blockquote>
+                </div>
+            </section>
+        </main>
+        <!-- ===== Footer (injected by js/include.js from partials/footer.html) ===== -->
+        <div data-include="footer"></div>
+        <script src="js/include.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

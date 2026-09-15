@@ -1,0 +1,22 @@
+<header class="site-header">
+    <nav class="navbar container" aria-label="メインナビゲーション">
+        <a class="brand" href="index.html">Coffee<span>Blend</span></a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="メニューを開く"
+            aria-expanded="false"
+            aria-controls="site-menu"
+        >
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-menu" id="site-menu">
+            <a data-page="home" href="index.html">ホーム</a
+            ><a data-page="menu" href="menu.html">メニュー</a
+            ><a data-page="services" href="services.html">サービス</a
+            ><a data-page="about" href="about.html">私たちについて</a
+            ><a data-page="contact" href="contact.html">お問い合わせ</a
+            ><a class="nav-cta" href="index.html#booking">席を予約する</a>
+        </div>
+    </nav>
+</header>

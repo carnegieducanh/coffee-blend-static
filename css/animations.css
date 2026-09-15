@@ -1,0 +1,42 @@
+/* Scroll-reveal animation (page-rise keyframe + .is-visible utility toggled by app.js) */
+@keyframes page-rise {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.story-image,
+.story-copy,
+.section-heading,
+.menu-images,
+.service-grid,
+.counter-band .container,
+.product-grid,
+.gallery-scroll-wrapper,
+.booking-inner,
+.testimonial-scroll-wrapper,
+.catalog-grid,
+.value-grid,
+.service-card-grid,
+.contact-details,
+.contact-form,
+.menu-note .container,
+.quote-band .container,
+.service-image-band .container,
+.map-placeholder .container,
+.menu-tabs {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+}
+.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+}
+

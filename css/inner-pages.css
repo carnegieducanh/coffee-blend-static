@@ -1,0 +1,219 @@
+/* Inner-page specifics: about/values, quote band, menu tabs+catalog, services page, contact page */
+.about-story {
+    margin: 0;
+    background: var(--cream);
+}
+.values {
+    background: var(--paper);
+}
+.value-grid,
+.service-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 52px;
+}
+.value-grid article,
+.service-card-grid article {
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+.value-grid article:hover,
+.service-card-grid article:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+.value-grid span,
+.service-icon {
+    color: var(--caramel);
+    font-weight: 600;
+    font-size: 13px;
+    font-family: var(--font-josefin);
+}
+.value-grid p,
+.service-card-grid p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 15px;
+}
+
+.quote-band {
+    background: var(--espresso);
+    color: var(--white);
+    padding: 75px 0;
+    text-align: center;
+}
+.quote-band blockquote {
+    max-width: 700px;
+    margin: 25px auto 0;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: var(--font-josefin);
+}
+
+.menu-note {
+    background: var(--espresso);
+    color: var(--white);
+    padding: 75px 0;
+}
+.menu-note h2 {
+    max-width: 550px;
+}
+.menu-catalog .section-heading > p:last-child,
+.service-page .section-heading > p:last-child {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 48px 0 34px;
+}
+.menu-tab {
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    padding: 11px 25px;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: var(--font-josefin);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.menu-tab.is-active,
+.menu-tab:hover {
+    background: var(--caramel);
+    border-color: var(--caramel);
+    color: var(--white);
+}
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+.catalog-item[hidden] {
+    display: none;
+}
+
+.service-page {
+    background: var(--cream);
+}
+.service-card-grid article {
+    background: var(--paper);
+    border: 0;
+    padding: 35px;
+    min-height: 270px;
+    box-shadow: var(--shadow);
+}
+.service-icon {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+.service-image-band {
+    min-height: 430px;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.service-image-band:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 14, 9, 0.58);
+}
+.service-image-band .container {
+    position: relative;
+    z-index: 1;
+}
+.service-image-band h2 {
+    max-width: 500px;
+}
+
+.contact-page {
+    background: var(--cream);
+}
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: start;
+}
+.contact-details > p:not(.eyebrow) {
+    color: var(--muted);
+    max-width: 420px;
+}
+.detail-item {
+    border-top: 1px solid var(--line);
+    padding: 17px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 15px;
+}
+.detail-item strong {
+    font-weight: 600;
+    font-size: 13px;
+    font-family: var(--font-josefin);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.detail-item span,
+.detail-item a {
+    color: rgba(255, 255, 255, 0.68);
+    text-align: right;
+}
+.contact-form {
+    display: grid;
+    gap: 15px;
+}
+.contact-form label {
+    font-weight: 600;
+    font-size: 13px;
+    font-family: var(--font-josefin);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--coffee);
+    font-size: 14px;
+    font-family: var(--font-poppins);
+    resize: vertical;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.52);
+}
+.contact-form .form-message {
+    margin: 0;
+    color: var(--caramel);
+    font-size: 14px;
+}
+.map-placeholder {
+    min-height: 320px;
+    background:
+        linear-gradient(rgba(24, 14, 9, 0.65), rgba(24, 14, 9, 0.65)),
+        url("../images/about.jpg") center/cover;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+.map-placeholder h2 {
+    margin-bottom: 25px;
+}
+

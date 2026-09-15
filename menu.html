@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="CoffeeBlendのメニューをご紹介します。"
+        />
+        <title>メニュー | CoffeeBlend</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/section-heading.css" />
+        <link rel="stylesheet" href="css/home-content.css" />
+        <link rel="stylesheet" href="css/inner-pages.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/animations.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+    </head>
+    <body data-page="menu">
+        <!-- ===== Header / Navigation (injected by js/include.js from partials/header.html) ===== -->
+        <div data-include="header"></div>
+        <main>
+            <!-- ===== Page hero (breadcrumb banner) ===== -->
+            <section
+                class="page-hero"
+                style="background-image: url(&quot;images/bg_3.jpg&quot;)"
+            >
+                <div class="hero-overlay"></div>
+                <div class="container page-hero-content">
+                    <p class="eyebrow">こだわりの味</p>
+                    <h1>メニュー</h1>
+                    <p>
+                        <a href="index.html">ホーム</a><span>/</span> メニュー
+                    </p>
+                </div>
+                <div class="scroll-hint" aria-hidden="true">
+                    <span>スクロールダウン</span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M12 4v15M6 13l6 6 6-6" />
+                    </svg>
+                </div>
+            </section>
+            <!-- ===== Menu catalog (tab filter + product grid) ===== -->
+            <section class="section menu-catalog">
+                <div class="container">
+                    <div class="section-heading centered">
+                        <p class="eyebrow eyebrow-dark">心を込めて</p>
+                        <h2>お気に入りを見つける</h2>
+                        <p>
+                            朝のコーヒーから満足感のある一皿まで、いつでも美味しいものをご用意しています。
+                        </p>
+                    </div>
+                    <div class="menu-tabs" role="tablist">
+                        <button
+                            class="menu-tab is-active"
+                            type="button"
+                            data-category="drink"
+                        >
+                            ドリンク</button
+                        ><button
+                            class="menu-tab"
+                            type="button"
+                            data-category="dessert"
+                        >
+                            スイーツ</button
+                        ><button
+                            class="menu-tab"
+                            type="button"
+                            data-category="dish"
+                        >
+                            フード
+                        </button>
+                    </div>
+                    <div class="catalog-grid">
+                        <article class="catalog-item" data-category="drink">
+                            <img
+                                src="images/drink-1.jpg"
+                                alt="シグネチャーラテ"
+                            />
+                            <div>
+                                <h3>シグネチャーラテ</h3>
+                                <p>なめらかなエスプレッソとスチームミルク。</p>
+                                <strong>¥680</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="drink">
+                            <img
+                                src="images/drink-2.jpg"
+                                alt="アイスコーヒー"
+                            />
+                            <div>
+                                <h3>コールドブリュー</h3>
+                                <p>
+                                    ゆっくり抽出した、なめらかで奥深い味わい。
+                                </p>
+                                <strong>¥620</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="drink">
+                            <img
+                                src="images/drink-3.jpg"
+                                alt="フレッシュコーヒー"
+                            />
+                            <div>
+                                <h3>ハウスエスプレッソ</h3>
+                                <p>自慢のローストを、濃厚なショートで。</p>
+                                <strong>¥480</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="dessert">
+                            <img
+                                src="images/dessert-1.jpg"
+                                alt="季節のスイーツ"
+                            />
+                            <div>
+                                <h3>季節のスイーツ</h3>
+                                <p>旬の素材を使って毎日焼き上げています。</p>
+                                <strong>¥520</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="dessert">
+                            <img
+                                src="images/dessert-2.jpg"
+                                alt="カフェスイーツ"
+                            />
+                            <div>
+                                <h3>ショコラデライト</h3>
+                                <p>
+                                    濃厚なカカオと柔らかな口どけ、心地よい食感。
+                                </p>
+                                <strong>¥560</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="dessert">
+                            <img
+                                src="images/dessert-3.jpg"
+                                alt="フルーツデザート"
+                            />
+                            <div>
+                                <h3>フルーツタルト</h3>
+                                <p>
+                                    色鮮やかな果実とバター香る生地、軽やかなクリーム。
+                                </p>
+                                <strong>¥580</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="dish">
+                            <img
+                                src="images/dish-1.jpg"
+                                alt="ブランチプレート"
+                            />
+                            <div>
+                                <h3>Blendブランチ</h3>
+                                <p>シンプルで新鮮、満足感のある一皿。</p>
+                                <strong>¥1,280</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="dish">
+                            <img src="images/dish-2.jpg" alt="カフェランチ" />
+                            <div>
+                                <h3>本日のプレート</h3>
+                                <p>その日の食材で仕立てる、豊かな一皿。</p>
+                                <strong>¥1,180</strong>
+                            </div>
+                        </article>
+                        <article class="catalog-item" data-category="dish">
+                            <img
+                                src="images/dish-3.jpg"
+                                alt="フレッシュなカフェ料理"
+                            />
+                            <div>
+                                <h3>トーストサンド</h3>
+                                <p>
+                                    香ばしく焼き上げた、具材たっぷりのサンド。
+                                </p>
+                                <strong>¥880</strong>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== Menu note (closing CTA) ===== -->
+            <section class="menu-note">
+                <div class="container">
+                    <p class="eyebrow">席をご用意しています</p>
+                    <h2>お気に入りの味と、ゆっくりした時間を。</h2>
+                    <a class="button button-primary" href="index.html#booking"
+                        >席を予約する</a
+                    >
+                </div>
+            </section>
+        </main>
+        <!-- ===== Footer (injected by js/include.js from partials/footer.html) ===== -->
+        <div data-include="footer"></div>
+        <script src="js/include.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>

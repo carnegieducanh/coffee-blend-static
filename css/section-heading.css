@@ -1,0 +1,98 @@
+/* Quick-info bar + shared section-heading/eyebrow/h2 pattern used across all pages */
+.quick-info {
+    background: var(--espresso);
+    color: var(--white);
+    padding: 24px 0;
+}
+.info-grid,
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.info-grid > div {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 22px;
+    animation: page-rise 0.65s both ease-out;
+}
+.info-grid > div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.info-grid > div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.info-grid strong,
+.info-grid span {
+    display: block;
+}
+.info-grid strong {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: var(--font-josefin);
+}
+.info-grid span {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+}
+
+.section-heading,
+.story-copy {
+    position: relative;
+    z-index: 0;
+}
+.section-heading .eyebrow,
+.story-copy .eyebrow,
+.booking .eyebrow,
+.menu-note .eyebrow,
+.service-image-band .eyebrow,
+.contact-details .eyebrow,
+.map-placeholder .eyebrow {
+    display: block;
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-script-jp);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: -24px;
+}
+.section-heading h2,
+.story-copy h2,
+.booking h2,
+.menu-note h2,
+.service-image-band h2,
+.contact-details h2,
+.map-placeholder h2 {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+.section-heading > p:not(.eyebrow),
+.story-copy > p:not(.eyebrow),
+.booking-inner > div > p:not(.eyebrow),
+.contact-details > p:not(.eyebrow) {
+    position: relative;
+    z-index: 2;
+    display: block;
+    clear: both;
+}
+.section-heading > p:not(.eyebrow) {
+    color: var(--muted);
+    max-width: 390px;
+}
+.booking-form,
+.service-card-grid,
+.catalog-grid,
+.product-grid,
+.menu-images {
+    position: relative;
+    z-index: 2;
+}
+

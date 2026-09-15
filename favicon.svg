@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark coffee-brown rounded background -->
+  <rect width="100" height="100" rx="18" fill="#1d150b"/>
+
+  <!-- Steam wisps (wavy S-curves going upward) -->
+  <path d="M30 38 C27 32 33 27 30 21" stroke="#c49b63" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M50 35 C47 29 53 24 50 18" stroke="#c49b63" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M70 38 C67 32 73 27 70 21" stroke="#c49b63" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Cup body (trapezoid: wider at top, narrower at bottom) -->
+  <path d="M15 43 L21 79 L79 79 L85 43 Z" fill="#c49b63"/>
+
+  <!-- Dark coffee surface inside the cup -->
+  <ellipse cx="50" cy="43.5" rx="17.5" ry="4" fill="#1d150b" opacity="0.55"/>
+
+  <!-- Cup handle (right side) -->
+  <path d="M82 51 C96 52 96 71 82 71" stroke="#c49b63" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- Saucer -->
+  <rect x="11" y="80" width="78" height="7" rx="3.5" fill="#a07840"/>
+</svg>

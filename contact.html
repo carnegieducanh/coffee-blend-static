@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="東京のCoffeeBlendへのお問い合わせ。"
+        />
+        <title>お問い合わせ | CoffeeBlend</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/section-heading.css" />
+        <link rel="stylesheet" href="css/home-content.css" />
+        <link rel="stylesheet" href="css/inner-pages.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/animations.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+    </head>
+    <body data-page="contact">
+        <!-- ===== Header / Navigation (injected by js/include.js from partials/header.html) ===== -->
+        <div data-include="header"></div>
+        <main>
+            <!-- ===== Page hero (breadcrumb banner) ===== -->
+            <section
+                class="page-hero"
+                style="background-image: url(&quot;images/bg_3.jpg&quot;)"
+            >
+                <div class="hero-overlay"></div>
+                <div class="container page-hero-content">
+                    <p class="eyebrow">お気軽にどうぞ</p>
+                    <h1>お問い合わせ</h1>
+                    <p>
+                        <a href="index.html">ホーム</a
+                        ><span>/</span> お問い合わせ
+                    </p>
+                </div>
+                <div class="scroll-hint" aria-hidden="true">
+                    <span>スクロールダウン</span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M12 4v15M6 13l6 6 6-6" />
+                    </svg>
+                </div>
+            </section>
+            <!-- ===== Contact details + form ===== -->
+            <section class="section contact-page">
+                <div class="container contact-layout">
+                    <div class="contact-details">
+                        <p class="eyebrow eyebrow-dark">店舗情報</p>
+                        <h2>皆さまからのご連絡をお待ちしています。</h2>
+                        <p>
+                            ご質問やご予約、ちょっとしたご挨拶まで。メッセージをお送りいただければ、できるだけ早くお返事します。
+                        </p>
+                        <div class="detail-item">
+                            <strong>住所</strong
+                            ><span
+                                >2-14-5 Dogenzaka, Shibuya-ku,<br />Tokyo
+                                150-0043, Japan</span
+                            >
+                        </div>
+                        <div class="detail-item">
+                            <strong>電話</strong
+                            ><a href="tel:+81356781234">+81 (0)3-5678-1234</a>
+                        </div>
+                        <div class="detail-item">
+                            <strong>メール</strong
+                            ><a href="mailto:hello@coffeeblend.jp"
+                                >hello@coffeeblend.jp</a
+                            >
+                        </div>
+                        <div class="detail-item">
+                            <strong>営業時間</strong
+                            ><span>毎日 08:00 - 22:00</span>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <label
+                            >お名前<input
+                                type="text"
+                                name="name"
+                                placeholder="お名前"
+                                required /></label
+                        ><label
+                            >メールアドレス<input
+                                type="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                required /></label
+                        ><label
+                            >件名<input
+                                type="text"
+                                name="subject"
+                                placeholder="ご用件をお聞かせください" /></label
+                        ><label
+                            >メッセージ<textarea
+                                name="message"
+                                rows="6"
+                                placeholder="メッセージをご入力ください"
+                                required
+                            ></textarea></label
+                        ><button class="button button-primary" type="submit">
+                            メッセージを送信
+                        </button>
+                        <p class="form-message" role="status"></p>
+                    </form>
+                </div>
+            </section>
+            <!-- ===== Map placeholder ===== -->
+            <section class="map-placeholder">
+                <div class="container">
+                    <div>
+                        <p class="eyebrow">CoffeeBlendへお越しください</p>
+                        <h2>渋谷でお待ちしています。</h2>
+                        <a
+                            class="button button-outline"
+                            href="https://maps.google.com/?q=Dogenzaka+Shibuya+Tokyo"
+                            target="_blank"
+                            rel="noreferrer"
+                            >地図で見る</a
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ===== Footer (injected by js/include.js from partials/footer.html) ===== -->
+        <div data-include="footer"></div>
+        <script src="js/include.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/contact.js"></script>
+    </body>
+</html>

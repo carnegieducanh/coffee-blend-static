@@ -1,0 +1,85 @@
+/* Site header: sticky nav, brand, nav menu, mobile hamburger toggle */
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.site-header.is-scrolled {
+    position: fixed;
+    background: #151111;
+    border-bottom: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    animation: navbar-drop 0.35s ease both;
+}
+@keyframes navbar-drop {
+    from {
+        opacity: 0.7;
+        transform: translateY(-18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1;
+    font-family: "Great Vibes", cursive;
+    color: var(--white);
+    white-space: nowrap;
+}
+.brand span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    font-family: var(--font-josefin);
+    margin-left: 2px;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: var(--font-poppins-jp);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-menu a {
+    transition: color 0.2s;
+}
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--caramel);
+}
+.nav-cta {
+    border: 1px solid var(--caramel);
+    padding: 8px 15px;
+    color: var(--caramel) !important;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 8px;
+}
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px;
+    background: var(--white);
+}
+
