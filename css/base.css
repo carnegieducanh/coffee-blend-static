@@ -16,20 +16,72 @@
     --font-josefin: "Josefin Sans", sans-serif;
     --font-josefin-jp: "Josefin Sans", "Noto Sans JP", sans-serif;
     --font-script-jp: "Great Vibes", "Noto Sans JP", cursive;
+    --marquee-duration: 50s;
 }
 * {
     box-sizing: border-box;
 }
-html {
-    scroll-behavior: smooth;
+/* Lenis (js/smooth-scroll.js) handles smooth scrolling; no scroll-behavior: smooth here */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+    overflow: clip;
+}
+.lenis [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+/* Slim scrollbar (default Windows bar is ~17px) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #151111;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(196, 155, 99, 0.55);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--caramel);
+}
+/* Firefox has no ::-webkit-scrollbar; Chromium would ignore those rules if
+   scrollbar-width were set, so only apply it where they are unsupported */
+@supports not selector(::-webkit-scrollbar) {
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(196, 155, 99, 0.55) #151111;
+    }
 }
 body {
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
-    background: #151111 url("../images/bg_4.jpg") center / cover fixed no-repeat;
+    background: #151111;
     font-family: var(--font-poppins-jp);
     font-size: 15px;
     line-height: 1.8;
+}
+/* Fixed backdrop on its own layer: background-attachment: fixed repaints the
+   whole image on every scroll frame and makes smooth scrolling stutter */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url("../images/bg_4.jpg") center / cover no-repeat;
+    will-change: transform;
+    pointer-events: none;
+}
+/* ScrollReveal shifts elements sideways before revealing them (origin left/right);
+   clip that so full-width blocks like .story-copy don't add a horizontal scrollbar.
+   clip (unlike hidden) creates no scroll container, so Lenis and sticky still work. */
+main {
+    overflow-x: clip;
 }
 img {
     display: block;

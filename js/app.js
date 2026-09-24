@@ -83,49 +83,50 @@ function initApp() {
         startSlider();
     }
 
-    const revealTargets = document.querySelectorAll(
-        [
-            ".story-image",
-            ".story-copy",
-            ".section-heading",
-            ".menu-images",
-            ".service-grid",
-            ".counter-band .container",
-            ".product-grid",
-            ".gallery-scroll-wrapper",
-            ".booking-inner",
-            ".testimonial-scroll-wrapper",
-            ".catalog-grid",
-            ".value-grid",
-            ".service-card-grid",
-            ".contact-details",
-            ".contact-form",
-            ".menu-note .container",
-            ".quote-band .container",
-            ".service-image-band .container",
-            ".map-placeholder .container",
-            ".menu-tabs",
-        ].join(", "),
-    );
+    // Auto-scrolling strips: the keyframe shifts the track by one set of items
+    // (--loop-width), so after that shift the rest of the track must still
+    // cover the wrapper. Clone sets until it does, so wide screens show no gap.
+    function setupMarquee(track) {
+        const wrapper = track.parentElement;
+        const originals = Array.from(track.children).filter(
+            (item) => !item.hasAttribute("aria-hidden"),
+        );
 
-    if (revealTargets.length) {
-        if ("IntersectionObserver" in window) {
-            const revealObserver = new IntersectionObserver(
-                (entries, observer) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("is-visible");
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+        function fill() {
+            track
+                .querySelectorAll("[data-marquee-clone]")
+                .forEach((clone) => clone.remove());
+
+            const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+            const loopWidth = originals.reduce(
+                (width, item) => width + item.offsetWidth + gap,
+                0,
             );
-            revealTargets.forEach((el) => revealObserver.observe(el));
-        } else {
-            revealTargets.forEach((el) => el.classList.add("is-visible"));
+            if (!loopWidth) return;
+            track.style.setProperty("--loop-width", `${loopWidth}px`);
+
+            while (track.scrollWidth < loopWidth + wrapper.clientWidth) {
+                originals.forEach((item) => {
+                    const clone = item.cloneNode(true);
+                    clone.setAttribute("aria-hidden", "true");
+                    clone.setAttribute("data-marquee-clone", "");
+                    clone.querySelectorAll("img").forEach((img) => (img.alt = ""));
+                    track.appendChild(clone);
+                });
+            }
         }
+
+        fill();
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(fill, 150);
+        });
     }
+
+    document
+        .querySelectorAll(".gallery-track, .testimonial-track")
+        .forEach(setupMarquee);
 }
 
 document.addEventListener("partials:loaded", initApp);

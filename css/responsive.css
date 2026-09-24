@@ -196,12 +196,19 @@
     }
 }
 @media (prefers-reduced-motion: reduce) {
-    *,
+    /* [data-sr-id] = mid-reveal by ScrollReveal, which needs its own transition */
+    *:not([data-sr-id]),
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
+    }
+    /* The gallery and testimonial strips keep auto-scrolling on purpose */
+    .gallery-track,
+    .testimonial-track {
+        animation-duration: var(--marquee-duration) !important;
+        animation-iteration-count: infinite !important;
     }
 }

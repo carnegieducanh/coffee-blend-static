@@ -235,7 +235,7 @@
     display: flex;
     gap: 10px;
     width: max-content;
-    animation: gallery-scroll 50s linear infinite;
+    animation: gallery-scroll var(--marquee-duration) linear infinite;
 }
 .gallery-track:hover {
     animation-play-state: paused;
@@ -256,12 +256,13 @@
     transform: scale(1.04);
     filter: saturate(1.08);
 }
+/* --loop-width is one set of items, measured by app.js; 50% is the no-JS fallback */
 @keyframes gallery-scroll {
     from {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-1 * var(--loop-width, 50%)));
     }
 }
 
@@ -334,7 +335,7 @@
     display: flex;
     gap: 24px;
     width: max-content;
-    animation: testimonial-scroll 50s linear infinite;
+    animation: testimonial-scroll var(--marquee-duration) linear infinite;
 }
 .testimonial-track:hover {
     animation-play-state: paused;
@@ -352,7 +353,7 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-1 * var(--loop-width, 50%)));
     }
 }
 .quote-mark {
